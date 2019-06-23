@@ -1,0 +1,53 @@
+{
+  "name": "get-ami",
+  "version": "0.2.0",
+  "description": "get official AMI from AWS",
+  "main": "index.js",
+  "scripts": {
+    "mocha": "mocha --recursive test",
+    "lint": "eslint --fix lib test",
+    "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "check": "run-s lint test",
+    "postversion": "git push origin $(git describe --abbrev=0 --tags)",
+    "start": "node bin/main.js",
+    "create": "node bin/main.js create",
+    "destroy": "node bin/main.js destroy",
+    "list": "node bin/main.js list"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/so5/get-ami.git"
+  },
+  "keywords": [
+    "AWS",
+    "AMI",
+    "machine",
+    "image"
+  ],
+  "author": "Naoyuki Sogo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/so5/get-ami/issues"
+  },
+  "homepage": "https://github.com/so5/get-ami#readme",
+  "dependencies": {
+    "aws-sdk": "^2.475.0",
+    "debug": "^4.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-eslint": "^5.0.1",
+    "eslint-plugin-chai-expect": "^2.0.1",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-jsdoc": "^8.0.1",
+    "eslint-plugin-node": "^9.1.0",
+    "mocha": "^6.1.4",
+    "npm-run-all": "^4.1.5",
+    "nyc": "^14.1.1",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0"
+  }
+}
