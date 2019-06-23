@@ -2,18 +2,14 @@
   "name": "get-ami",
   "version": "0.2.9",
   "description": "get official AMI from AWS",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "mocha": "mocha --recursive test",
     "lint": "eslint --fix lib test",
     "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "check": "run-s lint test",
-    "postversion": "git push origin $(git describe --abbrev=0 --tags)",
-    "start": "node bin/main.js",
-    "create": "node bin/main.js create",
-    "destroy": "node bin/main.js destroy",
-    "list": "node bin/main.js list"
+    "postversion": "git push origin $(git describe --abbrev=0 --tags)"
   },
   "repository": {
     "type": "git",
