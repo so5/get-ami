@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/so5/get-ami#readme",
   "dependencies": {
-    "aws-sdk": "^2.475.0",
+    "aws-sdk": "^2.631.0",
     "debug": "^4.1.1"
   },
   "devDependencies": {
